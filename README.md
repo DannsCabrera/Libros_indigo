@@ -4,24 +4,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para descargar y ejecutar el proyecto se deben seguir estos pasos:
 
-## Code scaffolding
+1) Para esto se necesita tener instalada la version de git ver en https://git-scm.com/downloads
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2) Una vez teniendo instalado git se procede a clonar el proyecto, se selecciona la carpeta en la que se guardara y se utiliza este comando desde la consola:  git clone https://github.com/DannsCabrera/Libros_indigo.git
 
-## Build
+3) Cuando termine de clonar el proyecto se necesitan instalar todas las dependencias por lo cual entraremos a la carpeta del proyecto que se descargo y desde consola se ejecuta el siguiente comando: npm install  (Para ejecutarlo se necesita tener instalado node.js https://nodejs.org/es/).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+4) Una vez que termino de instalar las dependencias se inicia el servidor con el comando: ng serve, este comando levanta el sitio y para poder visualizarlo se necesita abrir el explorador y en la barra de dirección se pone: localhost:4200
 
-## Running unit tests
+5) Con eso el sitio esta en funcionamiento total.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
