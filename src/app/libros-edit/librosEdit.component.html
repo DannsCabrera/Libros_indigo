@@ -1,0 +1,46 @@
+<h3> Editar libro </h3>
+<hr>
+<button type="button" class="btn btn-primary" (click)="regresar();">Regresar</button>
+
+<hr>
+<div style="text-align:left;">
+
+<form name="form" [formGroup]="newForm" novalidate>
+    <div class="form-group">
+        <label for="libro">Libro</label>
+        <input type="text" class="form-control" name="libro" maxlength="20" formControlName="libro" required style="width:400px"/>
+        <div *ngIf="newForm.controls['libro'].errors && !newForm.controls['libro'].pristine">
+            <div [hidden]="!newForm.controls['libro'].errors.required" class="help-block">El nombre es requerido</div>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="autor">Autor</label>
+        <input type="text" class="form-control" name="autor" maxlength="20" formControlName="autor" required style="width:400px"/>
+        <div *ngIf="newForm.controls['autor'].errors && !newForm.controls['autor'].pristine">
+            <div [hidden]="!newForm.controls['autor'].errors.required" class="help-block">El Autor es requerido</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="paginas">Páginas</label>
+        <input type="text" class="form-control" name="paginas" formControlName="paginas" required maxlength="10" style="width:400px"/>
+        <div *ngIf="newForm.controls['paginas'].errors && !newForm.controls['paginas'].pristine">
+            <div [hidden]="!newForm.controls['paginas'].errors.required" class="help-block">El numero de páginas es requerido</div>
+            <div [hidden]="!newForm.controls['paginas'].errors.pattern" class="help-block">Solo se aceptan numeros en este campo</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="editorial">Editorial</label>
+        <input type="text" class="form-control" name="editorial" maxlength="20" formControlName="editorial" required style="width:400px"/>
+        <div *ngIf="newForm.controls['editorial'].errors && !newForm.controls['editorial'].pristine">
+            <div [hidden]="!newForm.controls['editorial'].errors.required" class="help-block">La editorial es requerida</div>
+        </div>
+    </div>
+
+    <div>
+        <button type="button" class="btn btn-primary" [disabled]="!newForm?.valid" (click)="edit();">Editar libro</button>
+    </div>
+</form>
+</div>

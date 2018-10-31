@@ -1,0 +1,64 @@
+<h3> Libros </h3>
+<hr>
+<button type="button" class="btn btn-primary" (click)="new();">Nuevo libro</button>
+
+<div class="row">
+    <div class="col-md-12"> 
+        <ngx-datatable [columnMode]="'force'" class="material" [rows]="listLibros" [headerHeight]="50"
+        [footerHeight]="0" [rowHeight]="40" [messages]="{emptyMessage: 'Sin libros disponibles', selectedMessage: false}">
+        <ngx-datatable-column [resizeable]="false">
+            <ng-template let-column="column" ngx-datatable-header-template>
+                Libro
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{ row.libro }}
+            </ng-template>
+        </ngx-datatable-column>
+        
+        <ngx-datatable-column [resizeable]="false">
+            <ng-template let-column="column" ngx-datatable-header-template i18n>
+                Autor
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{ row.autor }}
+            </ng-template>
+        </ngx-datatable-column>
+        
+        <ngx-datatable-column [resizeable]="false">
+            <ng-template let-column="column" ngx-datatable-header-template i18n>
+                Paginas
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{ row.paginas }}
+            </ng-template>
+        </ngx-datatable-column>
+        
+        <ngx-datatable-column [resizeable]="false">
+            <ng-template let-column="column" ngx-datatable-header-template i18n>
+                Editorial
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{ row.editorial }}
+            </ng-template>
+        </ngx-datatable-column>
+        
+        <ngx-datatable-column [resizeable]="false">
+            <ng-template let-column="column" ngx-datatable-header-template i18n>
+                Editar
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <button type="button" class="btn btn-warning" (click)="editar(row);">editar</button>
+            </ng-template>
+        </ngx-datatable-column>
+        
+        <ngx-datatable-column [resizeable]="false">
+            <ng-template let-column="column" ngx-datatable-header-template i18n>
+                Eliminar
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <button type="button" class="btn btn-danger" (click)="borrar(row);">eliminar</button>
+            </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+</div>
+</div>
